@@ -4,104 +4,79 @@ export class PricingSection extends LitElement {
   static styles = css`
     :host {
       display: block;
-      padding: 4rem 2rem;
-      background: #f5f5f5;
+      padding: 2rem;
     }
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
     .pricing-card {
+      padding: 2rem;
       background: white;
       border-radius: 8px;
-      padding: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .plan-name {
-      font-size: 1.5rem;
-      color: #213547;
-      margin-bottom: 1rem;
     }
     .price {
       font-size: 2.5rem;
+      font-weight: bold;
       color: #646cff;
-      margin-bottom: 1.5rem;
+      margin: 1rem 0;
     }
-    .price span {
-      font-size: 1rem;
-      color: #666;
-    }
-    .features {
+    .features-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 1.5rem 0;
+      margin: 1rem 0;
     }
-    .features li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #eee;
+    .features-list li {
+      margin: 0.5rem 0;
     }
     .cta-button {
-      display: inline-block;
       background: #646cff;
       color: white;
-      padding: 1rem 2rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 4px;
       text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .cta-button:hover {
-      background: #535bf2;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: #213547;
+      display: inline-block;
+      margin-top: 1rem;
     }
   `;
 
   render() {
     return html`
-      <h2>Simple, Transparent Pricing</h2>
       <div class="pricing-grid">
         <div class="pricing-card">
-          <h3 class="plan-name">Basic</h3>
-          <div class="price">$29<span>/mo</span></div>
-          <ul class="features">
+          <h3>Basic</h3>
+          <div class="price">$29/mo</div>
+          <ul class="features-list">
             <li>Up to 5 vehicles</li>
             <li>Real-time tracking</li>
-            <li>Basic reporting</li>
-            <li>Email support</li>
+            <li>Basic reports</li>
           </ul>
           <a href="/contact" class="cta-button">Get Started</a>
         </div>
-
         <div class="pricing-card">
-          <h3 class="plan-name">Professional</h3>
-          <div class="price">$49<span>/mo</span></div>
-          <ul class="features">
+          <h3>Pro</h3>
+          <div class="price">$49/mo</div>
+          <ul class="features-list">
             <li>Up to 15 vehicles</li>
             <li>Advanced analytics</li>
-            <li>Fuel monitoring</li>
-            <li>24/7 support</li>
+            <li>Fuel management</li>
           </ul>
           <a href="/contact" class="cta-button">Get Started</a>
         </div>
-
         <div class="pricing-card">
-          <h3 class="plan-name">Enterprise</h3>
-          <div class="price">$99<span>/mo</span></div>
-          <ul class="features">
+          <h3>Enterprise</h3>
+          <div class="price">$99/mo</div>
+          <ul class="features-list">
             <li>Unlimited vehicles</li>
-            <li>Custom reporting</li>
-            <li>API access</li>
-            <li>Dedicated support</li>
+            <li>Custom solutions</li>
+            <li>24/7 support</li>
           </ul>
-          <a href="/contact" class="cta-button">Get Started</a>
+          <a href="/contact" class="cta-button">Contact Sales</a>
         </div>
       </div>
     `;
